@@ -13,3 +13,8 @@ app.use(express.static(__dirname + '/../client/dist'));
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });
+
+
+app.get('/api/allreviews', (req, res) => {
+  db.getAllReviews((data) => res.json(data))
+ });
