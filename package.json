@@ -22,6 +22,7 @@
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
+    "seed": "node server/scripts/seed.js ",
     "watch": "webpack --watch",
     "build": "webpack --config webpack.config.js",
     "start:dev": "node server",
