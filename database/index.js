@@ -8,9 +8,9 @@ const getAllReviews = function(callback) {
   var sql = 'select * from reviews';
    connection.query(sql, function (err, results, fields) {
      if (err) {
-       console.error(err)
+       callback(err);
      }
-   callback(results);
+   callback(null, results);
   });
 
 };

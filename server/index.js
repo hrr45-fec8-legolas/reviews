@@ -16,5 +16,11 @@ app.listen(PORT, () => {
 
 
 app.get('/api/allreviews', (req, res) => {
-  db.getAllReviews((data) => res.json(data))
+  db.getAllReviews((err, data) => {
+    if(err) {
+     res.status(500).send('Something Broke!');
+    } else {
+    res.json(data)
+    }
+  })
  });
