@@ -12,7 +12,8 @@ CREATE TABLE reviews (
   review varchar(500),
   image varchar(250),
   title varchar(50),
-  avatar varchar(250)
+  avatar int,
+  foundThisHelpful int
 );
 
 --  Execute this file from the command line by typing:

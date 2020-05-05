@@ -29,6 +29,7 @@
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
+    "test:coverage": "jest --verbose --coverage",
     "seed": "node server/scripts/seed.js ",
     "watch": "webpack --watch",
     "build": "webpack --config webpack.config.js",

@@ -1,23 +1,31 @@
 import React from 'react';
-import Review from './Review.jsx'
+import Review from './Review.jsx';
 
-const Reviews = (props) => (
-  <div>
+class Reviews extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
 
- <div id='containertopleft'>
-  <div id='customerReviews'>Customer Reviews</div>
+    }
+  }
+
+  render(props) {
+   return (
+    <div>
+
+    <div id='containertopleft'>
+     <div id='customerReviews'>Customer Reviews</div>
 
 
-
-
-
-  </div>
- <div>
-  {props.reviews.map(review => (
-          <Review id={review.id} name={review.name} stars={review.stars} date={review.date} reviewBody={review.review} image={review.image} title={review.title} avatar={review.avatar}/>
-        ))}
- </div>
- </div>
-);
+     </div>
+    <div>
+     {this.props.reviews.map(review => (
+             <Review id={review.id} name={review.name} stars={review.stars} date={review.date} reviewBody={review.review} image={review.image} title={review.title} avatar={review.avatar} foundThisHelpful={review.foundThisHelpful}/>
+           ))}
+    </div>
+    </div>
+   )
+  }
+ }
 
 export default Reviews;

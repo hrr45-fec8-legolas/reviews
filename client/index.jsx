@@ -12,9 +12,12 @@ class App extends React.Component {
     }
   }
 
+
   componentDidMount() {
+    var id = window.location.search;
+    // console.log('id client: ', id);
     var thisBind = this;
-    $.get('http://localhost:3004/api/allreviews', function(newData) {
+    $.get(`http://localhost:3004/api/allreviews/${id}`, function(newData) {
       thisBind.setState({
         reviews: newData,
       })
@@ -34,5 +37,8 @@ class App extends React.Component {
 
  ReactDOM.render(
    <App/>,
-   document.getElementById('app')
+   document.getElementById('app') || document.createElement('div') //<----- the OR is for testing purposes
  );
+
+ //for testing purposes
+ export default App;
