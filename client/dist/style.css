@@ -1,0 +1,273 @@
+#reviewsContainer {
+  margin-left: 25%;
+  margin-right: 39%;
+}
+
+#reviewBody {
+  font-size: 13px;
+  line-height: 19px;
+  font-family: sans-serif;
+  margin-bottom: 7px;
+}
+
+.filled {
+  color: orange;
+}
+
+.reviewTitle {
+  font-weight: 700;
+  margin-left: 10px;
+  font-size: 13px;
+  line-height: 19px;
+  font-family: sans-serif;
+}
+
+.reviewName {
+  margin-left: 10px;
+  margin-bottom: 33px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  line-height: 50px;
+  font-family: sans-serif;
+  color: #111;
+  vertical-align: 10px;
+}
+
+.reviewDate {
+  color: #555 !important;
+  font-size: 13px;
+  line-height: 19px;
+  font-family: sans-serif;
+  margin-bottom: 7px;
+}
+
+#foundthishelpful {
+  color: #767676;
+  font-size: 13px;
+  line-height: 19px;
+  font-family: sans-serif;
+  margin-bottom: 8px;
+}
+
+.helpfulButton {
+  height: 29px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  padding-bottom: 1px;
+  padding-right: 6px;
+  padding-left: 6px;
+  width: 98px;
+  color: #111;
+}
+
+.helpfulButton:hover {
+  background-color: rgb(233, 233, 233);
+  background: #e7e9ec;
+  border-radius: 3px;
+  border-color: #adb1b8 #a2a6ac #8d9096;
+  border-style: solid;
+  border-width: 1px;
+}
+.helpfulButton:focus {
+  outline-color: rgb(209, 122, 8);
+}
+
+.reviewName:hover {
+  cursor: pointer;
+}
+
+.reviewTitle:hover {
+  cursor: pointer;
+}
+
+.fa:hover {
+  cursor: pointer;
+}
+
+.avatar {
+  border: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  width: 43px;
+  height: 43px;
+  border-radius: 40px;
+  margin-left: -6px;
+}
+
+.avatar:hover {
+  cursor: pointer;
+}
+
+.divider {
+  display: inline-block;
+  margin: -2px 0.67375em 0;
+  width: 1px;
+  background-color: #ddd;
+  line-height: 0;
+  height: 14px;
+  vertical-align: middle;
+}
+
+.comment,
+.reportAbuse {
+  color: #767676;
+  font-size: 13px;
+  line-height: 19px;
+  font-family: sans-serif;
+}
+
+.comment:hover,
+.reportAbuse:hover {
+  color: #c45500 !important;
+  cursor: pointer;
+}
+
+.amazonStars:focus {
+  outline: 0;
+}
+
+.amazonStars {
+  border: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 80px;
+  height: 18px;
+  margin-left: -5px;
+}
+
+.amazonStars:hover {
+  cursor: pointer;
+}
+
+#containertopleft {
+  float: left;
+  margin-top: 0.3%;
+  margin-left: 0.5%;
+}
+
+#customerReviews {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+}
+
+.oneStar {
+  background-image: url("https://i.ibb.co/HD7rbg5/oneStar.png");
+  margin-left: -3.2px;
+}
+.twoStars {
+  margin-left: -3.5px;
+  background-image: url("https://i.ibb.co/Bnpcrzp/twoStars.png");
+}
+.threeStars {
+  background-image: url("https://i.ibb.co/XZbmRH1/three-Stars.png");
+  margin-left: -3.5px;
+}
+
+.fiveStars {
+  background-image: url("https://i.ibb.co/PcXMFVy/amazonstars2.png");
+}
+
+.helpfulClicked {
+  width: 187px;
+  height: 23px;
+  font-size: 0px;
+  border: none;
+  background-image: url("https://i.ibb.co/pXPvY99/feedback.png");
+  background-repeat: no-repeat;
+  padding-top: 16px;
+  margin-bottom: 24px;
+  margin-left: -5.2px;
+}
+
+.helpfulClicked:focus {
+  outline: 0;
+}
+
+.avatar1 {
+  width: 33px;
+  height: 33px;
+  background-image: url("https://robohash.org/ce8c1182fae1d7dc9dd404bb0fc3c5ac?set=set4&bgset=&size=400x400");
+}
+
+.avatar2 {
+  width: 33px;
+  height: 33px;
+  background-image: url("https://robohash.org/ce8c1182fae1d7dc9dd404bb0fc3c5ac?set=set4&bgset=&size=400x400");
+}
+
+.avatar3 {
+  width: 33px;
+  height: 33px;
+  background-image: url("https://gravatar.com/avatar/ce8c1182fae1d7dc9dd404bb0fc3c5ac?s=400&d=robohash&r=x");
+}
+.avatar4 {
+  width: 33px;
+  height: 33px;
+  background-image: url("https://gravatar.com/avatar/a6076802c5196f2976c9e15825294456?s=400&d=robohash&r=x");
+}
+.avatar5 {
+  width: 33px;
+  height: 33px;
+  background-image: url("https://gravatar.com/avatar/aae29403c21a3848a6d84aa057a78e41?s=400&d=robohash&r=x");
+}
+.avatar6 {
+  width: 33px;
+  height: 33px;
+  background-image: url("https://robohash.org/aae29403c21a3848a6d84aa057a78e41?set=set4&bgset=&size=400x400");
+}
+.avatar7 {
+  width: 33px;
+  height: 33px;
+  background-image: url("https://robohash.org/64e8c6786607acad513af2eed085333e?set=set4&bgset=&size=400x400");
+}
+.avatar8 {
+  width: 33px;
+  height: 33px;
+  background-image: url("https://robohash.org/a4431555e5193be3803f9d291fe6c85d?set=set4&bgset=&size=400x400");
+}
+.avatar9 {
+  width: 33px;
+  height: 33px;
+  background-image: url("https://robohash.org/4cd4aefa1d1f382d6104392d59c5c3fd?set=set4&bgset=&size=400x400");
+}
+.avatar10 {
+  width: 33px;
+  height: 33px;
+  background-image: url("https://api.adorable.io/avatars/400/4cd4aefa1d1f382d6104392d59c5c3fd.png");
+}
+.avatar11 {
+  width: 33px;
+  height: 33px;
+  background-image: url("https://api.adorable.io/avatars/400/c75939b67ca5fae9f392567e6e2c7627.png");
+}
+.avatar12 {
+  width: 33px;
+  height: 33px;
+  background-image: url("https://api.adorable.io/avatars/400/84ffa74b44a64a322f30ebf9763546ec.png");
+}
+.avatar13 {
+  width: 33px;
+  height: 33px;
+  background-image: url("https://robohash.org/a69353a1c498c2c9e89b6d32f3489d5d?set=set4&bgset=&size=400x400");
+}
+.avatar14 {
+  width: 33px;
+  height: 33px;
+  background-image: url("https://gravatar.com/avatar/a69353a1c498c2c9e89b6d32f3489d5d?s=400&d=robohash&r=x");
+}
+.avatar0 {
+  width: 33px;
+  height: 33px;
+  background-image: url("https://gravatar.com/avatar/6bf7aa6f5606d3a061222991ba2b827d?s=400&d=robohash&r=x");
+}
+.avatar15 {
+  width: 33px;
+  height: 33px;
+  background-image: url("https://gravatar.com/avatar/6bf7aa6f5606d3a061222991ba2b827d?s=400&d=robohash&r=x");
+}

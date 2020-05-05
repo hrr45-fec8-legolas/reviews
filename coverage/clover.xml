@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1588714185974" clover="3.2.0">
+  <project timestamp="1588714185975" name="All files">
+    <metrics statements="19" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="11" coveredmethods="7" elements="32" coveredelements="24" complexity="0" loc="19" ncloc="19" packages="2" files="3" classes="3"/>
+    <package name="client">
+      <metrics statements="8" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
+      <file name="index.jsx" path="/mnt/c/Users/Austin/Desktop/reviews/client/index.jsx">
+        <metrics statements="8" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="client.components">
+      <metrics statements="11" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="4"/>
+      <file name="Review.jsx" path="/mnt/c/Users/Austin/Desktop/reviews/client/components/Review.jsx">
+        <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+      </file>
+      <file name="Reviews.jsx" path="/mnt/c/Users/Austin/Desktop/reviews/client/components/Reviews.jsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
