@@ -1,54 +1,96 @@
-import React from 'react';
+import React from "react";
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
+function getRandomTime(min, max) {
+  return Math.random() * (max - min) + min;
 }
 
-var arr = ['amazonStars oneStar', 'amazonStars twoStars', 'amazonStars threeStars', 'amazonStars fiveStars', 'amazonStars fiveStars', 'amazonStars fiveStars', 'amazonStars fiveStars', 'amazonStars fiveStars', 'amazonStars fiveStars', 'amazonStars threeStars', 'amazonStars twoStars', 'amazonStars twoStars']
+var arr = [
+  "amazonStars oneStar",
+  "amazonStars oneStar",
+  "amazonStars twoStars",
+  "amazonStars twoStars",
+  "amazonStars threeStars",
+  "amazonStars threeStars",
+  "amazonStars fiveStars",
+  "amazonStars fiveStars",
+  "amazonStars fiveStars",
+  "amazonStars fiveStars",
+  "amazonStars fourStars",
+  "amazonStars fourStars",
+];
 
-var avatars = ['avatar avatar1', 'avatar avatar0', 'avatar avatar2', 'avatar avatar3', 'avatar avatar4', 'avatar avatar5', 'avatar avatar6', 'avatar avatar7', 'avatar avatar8', 'avatar avatar9', 'avatar avatar10', 'avatar avatar11', 'avatar avatar12', 'avatar avatar13', 'avatar avatar14'];
+var avatars = [
+  "avatar avatar1",
+  "avatar avatar0",
+  "avatar avatar2",
+  "avatar avatar3",
+  "avatar avatar4",
+  "avatar avatar5",
+  "avatar avatar6",
+  "avatar avatar7",
+  "avatar avatar8",
+  "avatar avatar9",
+  "avatar avatar10",
+  "avatar avatar11",
+  "avatar avatar12",
+  "avatar avatar13",
+  "avatar avatar14",
+  "avatar avatar15",
+];
 
 class Review extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      clicked: 'helpfulButton',
+      boolean: "false",
+      clicked: "helpfulButton",
+    };
+  }
+
+  changeClass() {
+    this.setState({ clicked: "helpfulClicked", boolean: "true" });
+  }
+
+  click() {
+    if (this.state.boolean === "false") {
+      this.setState({ clicked: "sendingFeedback" });
+      var thisBind = this;
+      setTimeout(function() {
+        thisBind.changeClass();
+      }, getRandomTime(50, 350));
     }
   }
 
-  click () {
-    this.setState({clicked: 'helpfulClicked'});
-    //how can I increase found helpful?
-  }
-
   render(props) {
-   return (
-    <div>
-    <div id = 'reviewsContainer'>
-    <button className={avatars[this.props.avatar]}></button>
- <span className='reviewName'>
-  {this.props.name}
- </span>
-  <div>
-
-  <button className={arr[this.props.stars]}></button>
-<span className="reviewTitle">{this.props.title}</span>
-
- </div>
- <div className='reviewDate'>
- {this.props.date}
- </div>
- <div id='reviewBody'>
- {this.props.reviewBody}
- </div>
- <div id='foundthishelpful'>
-   {this.props.foundThisHelpful} people found this helpful
- </div>
- <button onClick = {this.click.bind(this)} className={this.state.clicked}>Helpful</button> <span className='divider'></span> <span className='comment'>Comment</span><span className='divider'></span><span className='reportAbuse'>Report abuse</span>
- </div>
- </div>
-   )
+    return (
+      <div>
+        <div id="reviewsContainer">
+          <button className={avatars[this.props.avatar]}></button>
+          <span className="reviewName">{this.props.name}</span>
+          <div>
+            <button className={arr[this.props.stars]}></button>
+            <span className="reviewTitle">{this.props.title}</span>
+          </div>
+          <div className="reviewDate">{this.props.date}</div>
+          <div className="verified">Verified Purchase</div>
+          <div id="reviewBody">{this.props.reviewBody}</div>
+          <div id="foundthishelpful">
+            {this.props.foundThisHelpful} people found this helpful
+          </div>
+          <button
+            onClick={this.click.bind(this)}
+            className={this.state.clicked}
+          >
+            Helpful
+          </button>{" "}
+          <span className="divider"></span>{" "}
+          <span className="comment">Comment</span>
+          <span className="divider"></span>
+          <span className="reportAbuse">Report abuse</span>
+        </div>
+      </div>
+    );
   }
- }
+}
 
 export default Review;
