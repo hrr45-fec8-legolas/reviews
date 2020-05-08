@@ -11,12 +11,21 @@ var arr = [
   "amazonStars twoStars",
   "amazonStars threeStars",
   "amazonStars threeStars",
-  "amazonStars fiveStars",
-  "amazonStars fiveStars",
-  "amazonStars fiveStars",
-  "amazonStars fiveStars",
   "amazonStars fourStars",
   "amazonStars fourStars",
+  "amazonStars fourStars",
+  "amazonStars fourStars",
+  "amazonStars fiveStars",
+  "amazonStars fiveStars",
+  "amazonStars fiveStars",
+  "amazonStars fiveStars",
+  "amazonStars fiveStars",
+  "amazonStars fiveStars",
+  "amazonStars fiveStars",
+  "amazonStars fiveStars",
+  "amazonStars fiveStars",
+  "amazonStars fiveStars",
+  "amazonStars fiveStars",
 ];
 
 var avatars = [
@@ -61,6 +70,25 @@ class Review extends React.Component {
     }
   }
 
+  getStars() {
+    console.log(this.props);
+    if (this.props.stars < 2) {
+      return "1.0";
+    }
+    if (this.props.stars > 1 && this.props.stars < 4) {
+      return "2.0";
+    }
+    if (this.props.stars > 3 && this.props.stars < 6) {
+      return "3.0";
+    }
+    if (this.props.stars > 5 && this.props.stars < 10) {
+      return "4.0";
+    }
+    if (this.props.stars > 9) {
+      return "5.0";
+    }
+  }
+
   render(props) {
     return (
       <div>
@@ -68,7 +96,9 @@ class Review extends React.Component {
           <button className={avatars[this.props.avatar]}></button>
           <span className="reviewName">{this.props.name}</span>
           <div>
-            <button className={arr[this.props.stars]}></button>
+            <button className={arr[this.props.stars]}>
+              <div class="tooltip">{this.getStars()} out of 5 stars</div>
+            </button>
             <span className="reviewTitle">{this.props.title}</span>
           </div>
           <div className="reviewDate">{this.props.date}</div>

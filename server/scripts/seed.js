@@ -14,17 +14,16 @@ var arr = [
   `${faker.address.country()}`,
 ];
 
-var counter;
+var counter = 0;
 
-for (var j = 0; j < 4; j++) {
-  for (var i = 0; i < 4; i++) {
-    counter = 0;
+for (var j = 0; j < 8; j++) {
+  for (var i = 0; i < 6; i++) {
     while (counter < 5000) {
       var insertStatement = `INSERT INTO reviews(id, name, stars, date, review, image, title, avatar, foundThisHelpful)
       VALUES(${getRandomInt(
         101
       )}, '${faker.name.firstName()} ${faker.name.lastName()}', '${getRandomInt(
-        12
+        21
       )}', 'Reviewed in ${
         arr[getRandomInt(6)]
       } on ${faker.date.month()} ${getRandomInt(29) + 1 + ","} ${getRandomInt(
@@ -35,7 +34,7 @@ for (var j = 0; j < 4; j++) {
       )}', '${getRandomInt(86)}')`;
       db.connection.query(insertStatement, function(err, result) {});
       counter++;
-      if (j === 3 && i === 3 && counter === 4999) {
+      if (j === 7 && i === 5 && counter === 4999) {
         console.log("done seeding!");
       }
     }
