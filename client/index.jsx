@@ -14,7 +14,7 @@ class App extends React.Component {
   componentDidMount() {
     const id = window.location.search;
     const thisBind = this;
-    $.get(`http://localhost:3004/api/allreviews/${id}`, (newData) => {
+    $.get(`/api/allreviews/${id}`, (newData) => {
       thisBind.setState({
         reviews: newData,
       });
@@ -24,6 +24,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <div className="topDivider"></div>
         <Reviews reviews={this.state.reviews} />
       </div>
     );
@@ -32,7 +33,7 @@ class App extends React.Component {
 
 ReactDOM.render(
   <App />,
-  document.getElementById("app") || document.createElement("div") // <----- the OR is for testing purposes
+  document.getElementById("reviewsapp") || document.createElement("div") // <----- the OR is for testing purposes
 );
 
 // for testing purposes
