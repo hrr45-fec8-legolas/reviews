@@ -71,7 +71,6 @@ class Review extends React.Component {
   }
 
   getStars() {
-    console.log(this.props);
     if (this.props.stars < 2) {
       return "1.0";
     }
