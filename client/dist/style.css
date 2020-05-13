@@ -165,7 +165,6 @@
 #containertopleft {
   float: left;
   margin-top: 0.3%;
-  margin-left: 0.5%;
 }
 
 #customerReviews {
@@ -682,4 +681,13 @@ table {
   line-height: 0;
   height: 1px;
   vertical-align: middle;
+}
+
+.singleItemPage {
+}
+
+.item-details {
+}
+
+.flex-container {
 }
