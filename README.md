@@ -20,7 +20,7 @@ if using mariadb, skip the numbered steps.
 9. to run the tests with a coverage report: npm test:coverage
 10. IGNORE THE REST OF THE PAGE ========================================================================================================
 
-============= FOR MARIADB ===============================================================================================================
+============= FOR MARIADB ==============================================================================================================
 Please ensure that mariadb is running and execute [mysql -u <USER> -p < schema.sql] to add the database followed by [npm run seed] to seed your database
 
 to run webpack: npm run watch
@@ -30,3 +30,5 @@ visit http://localhost:3004/?id=[id] to visit the reviews page for the correspon
 
 to run the tests: npm test
 to run the tests with a coverage report: npm test:coverage
+
+========================================================================================================================================
