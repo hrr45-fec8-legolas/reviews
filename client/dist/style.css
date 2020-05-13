@@ -3,6 +3,7 @@
 #reviewsContainer {
   margin-left: 25%;
   margin-right: 39%;
+  margin-top: 28px;
 }
 
 #reviewBody {
@@ -164,7 +165,6 @@
 
 #containertopleft {
   float: left;
-  margin-top: 0.3%;
 }
 
 #customerReviews {
@@ -674,9 +674,8 @@ table {
 
 .topDivider {
   display: inline-block;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  width: 99%;
+  width: 100%;
+  margin-bottom: -20px;
   background-color: #ddd;
   line-height: 0;
   height: 1px;
@@ -690,4 +689,8 @@ table {
 }
 
 .flex-container {
+}
+
+#containerFixMargin {
+  margin-left: 0.5%;
 }
