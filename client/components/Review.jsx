@@ -1,50 +1,51 @@
 import React from "react";
+import style from "../dist/style.css";
 
 function getRandomTime(min, max) {
   return Math.random() * (max - min) + min;
 }
 
 var arr = [
-  "amazonStars oneStar",
-  "amazonStars oneStar",
-  "amazonStars twoStars",
-  "amazonStars twoStars",
-  "amazonStars threeStars",
-  "amazonStars threeStars",
-  "amazonStars fourStars",
-  "amazonStars fourStars",
-  "amazonStars fourStars",
-  "amazonStars fourStars",
-  "amazonStars fiveStars",
-  "amazonStars fiveStars",
-  "amazonStars fiveStars",
-  "amazonStars fiveStars",
-  "amazonStars fiveStars",
-  "amazonStars fiveStars",
-  "amazonStars fiveStars",
-  "amazonStars fiveStars",
-  "amazonStars fiveStars",
-  "amazonStars fiveStars",
-  "amazonStars fiveStars",
+  `${style.amazonStars} ${style.oneStar}`,
+  `${style.amazonStars} ${style.oneStar}`,
+  `${style.amazonStars} ${style.twoStars}`,
+  `${style.amazonStars} ${style.twoStars}`,
+  `${style.amazonStars} ${style.threeStars}`,
+  `${style.amazonStars} ${style.threeStars}`,
+  `${style.amazonStars} ${style.fourStars}`,
+  `${style.amazonStars} ${style.fourStars}`,
+  `${style.amazonStars} ${style.fourStars}`,
+  `${style.amazonStars} ${style.fourStars}`,
+  `${style.amazonStars} ${style.fiveStars}`,
+  `${style.amazonStars} ${style.fiveStars}`,
+  `${style.amazonStars} ${style.fiveStars}`,
+  `${style.amazonStars} ${style.fiveStars}`,
+  `${style.amazonStars} ${style.fiveStars}`,
+  `${style.amazonStars} ${style.fiveStars}`,
+  `${style.amazonStars} ${style.fiveStars}`,
+  `${style.amazonStars} ${style.fiveStars}`,
+  `${style.amazonStars} ${style.fiveStars}`,
+  `${style.amazonStars} ${style.fiveStars}`,
+  `${style.amazonStars} ${style.fiveStars}`,
 ];
 
 var avatars = [
-  "avatar avatar1",
-  "avatar avatar0",
-  "avatar avatar2",
-  "avatar avatar3",
-  "avatar avatar4",
-  "avatar avatar5",
-  "avatar avatar6",
-  "avatar avatar7",
-  "avatar avatar8",
-  "avatar avatar9",
-  "avatar avatar10",
-  "avatar avatar11",
-  "avatar avatar12",
-  "avatar avatar13",
-  "avatar avatar14",
-  "avatar avatar15",
+  `${style.avatar} ${style.avatar1}`,
+  `${style.avatar} ${style.avatar0}`,
+  `${style.avatar} ${style.avatar2}`,
+  `${style.avatar} ${style.avatar3}`,
+  `${style.avatar} ${style.avatar4}`,
+  `${style.avatar} ${style.avatar5}`,
+  `${style.avatar} ${style.avatar6}`,
+  `${style.avatar} ${style.avatar7}`,
+  `${style.avatar} ${style.avatar8}`,
+  `${style.avatar} ${style.avatar9}`,
+  `${style.avatar} ${style.avatar10}`,
+  `${style.avatar} ${style.avatar11}`,
+  `${style.avatar} ${style.avatar12}`,
+  `${style.avatar} ${style.avatar13}`,
+  `${style.avatar} ${style.avatar14}`,
+  `${style.avatar} ${style.avatar15}`,
 ];
 
 class Review extends React.Component {
@@ -52,17 +53,17 @@ class Review extends React.Component {
     super(props);
     this.state = {
       boolean: "false",
-      clicked: "helpfulButton",
+      clicked: `${style.helpfulButton}`,
     };
   }
 
   changeClass() {
-    this.setState({ clicked: "helpfulClicked", boolean: "true" });
+    this.setState({ clicked: `${style.helpfulClicked}`, boolean: "true" });
   }
 
   click() {
     if (this.state.boolean === "false") {
-      this.setState({ clicked: "sendingFeedback" });
+      this.setState({ clicked: `${style.sendingFeedback}` });
       var thisBind = this;
       setTimeout(function() {
         thisBind.changeClass();
@@ -91,19 +92,21 @@ class Review extends React.Component {
   render(props) {
     return (
       <div>
-        <div id="reviewsContainer">
+        <div id={style.reviewsContainer}>
           <button className={avatars[this.props.avatar]}></button>
-          <span className="reviewName">{this.props.name}</span>
+          <span className={style.reviewName}>{this.props.name}</span>
           <div>
             <button className={arr[this.props.stars]}>
-              <div class="tooltip">{this.getStars()} out of 5 stars</div>
+              <div className={style.tooltip}>
+                {this.getStars()} out of 5 stars
+              </div>
             </button>
-            <span className="reviewTitle">{this.props.title}</span>
+            <span className={style.reviewTitle}>{this.props.title}</span>
           </div>
-          <div className="reviewDate">{this.props.date}</div>
-          <div className="verified">Verified Purchase</div>
-          <div id="reviewBody">{this.props.reviewBody}</div>
-          <div id="foundthishelpful">
+          <div className={style.reviewDate}>{this.props.date}</div>
+          <div className={style.verified}>Verified Purchase</div>
+          <div id={style.reviewBody}>{this.props.reviewBody}</div>
+          <div id={style.foundthishelpful}>
             {this.props.foundThisHelpful} people found this helpful
           </div>
           <button
@@ -112,10 +115,10 @@ class Review extends React.Component {
           >
             Helpful
           </button>{" "}
-          <span className="divider"></span>{" "}
-          <span className="comment">Comment</span>
-          <span className="divider"></span>
-          <span className="reportAbuse">Report abuse</span>
+          <span className={style.divider}></span>{" "}
+          <span className={style.comment}>Comment</span>
+          <span className={style.divider}></span>
+          <span className={style.reportAbuse}>Report abuse</span>
         </div>
       </div>
     );

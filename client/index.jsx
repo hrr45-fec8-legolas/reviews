@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import $ from "jquery";
 import Reviews from "./components/Reviews.jsx";
+import style from "./dist/style.css";
 
 class App extends React.Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="topDivider"></div>
+        <div className={style.topDivider}></div>
         <Reviews reviews={this.state.reviews} />
       </div>
     );

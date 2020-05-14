@@ -1,5 +1,6 @@
 import React from "react";
 import Review from "./Review.jsx";
+import style from "../dist/style.css";
 
 function getRatings(numReviews) {
   var num = JSON.stringify(numReviews * 143);
@@ -102,11 +103,11 @@ class Reviews extends React.Component {
 
   getClassNames() {
     var arrOfPossibilities = [
-      "customerReviewsStars fiveStarsBig",
-      "customerReviewsStars fourToFive",
-      "customerReviewsStars threeToFour",
-      "customerReviewsStars twoStarsBig",
-      "customerReviewsStars fourStarsBig",
+      `${style.customerReviewsStars} ${style.fiveStarsBig}`,
+      `${style.customerReviewsStars} ${style.fourToFive}`,
+      `${style.customerReviewsStars} ${style.threeToFour}`,
+      `${style.customerReviewsStars} ${style.twoStarsBig}`,
+      `${style.customerReviewsStars} ${style.fourStarsBig}`,
     ];
     var avg = this.getAverageStars();
     if (Number(avg) > 4.8) {
@@ -134,82 +135,96 @@ class Reviews extends React.Component {
     const styles1 = { width: `${this.findPercentageOfStars(1)}%` };
     return (
       <div>
-        <div id="containertopleft">
-          <div id="customerReviews">Customer reviews</div>
+        <div id={style.containertopleft}>
+          <div id={style.customerReviews}>Customer reviews</div>
           <button className={this.getClassNames()}></button>
-          <span className="nextToStarsText">
+          <span className={style.nextToStarsText}>
             {this.getAverageStars()} out of 5
           </span>
-          <div className="numberCustomerRatings">
+          <div className={style.numberCustomerRatings}>
             {this.props.reviews.length} customer ratings
           </div>
-          <table className="ratingsTable">
+          <table className={style.ratingsTable}>
             <tr>
-              <td className="underline leftOfBar">5 star</td>
-              <td className="meter">
-                <div class="tooltip2">
+              <td className={`${style.underline} ${style.leftOfBar}`}>
+                5 star
+              </td>
+              <td className={style.meter}>
+                <div className={style.tooltip2}>
                   5 stars represent {this.findPercentageOfStars(5)}% of rating
                 </div>
-                <span className="progress" style={styles5}></span>
+                <span className={style.progress} style={styles5}></span>
               </td>
-              <td className="underline rightOfBar">
+              <td className={`${style.underline} ${style.rightOfBar}`}>
                 {this.findPercentageOfStars(5)}%
               </td>
             </tr>
             <tr>
-              <td className="underline leftOfBar">4 star</td>
-              <td className="meter">
-                <div class="tooltip2">
+              <td className={`${style.underline} ${style.leftOfBar}`}>
+                4 star
+              </td>
+              <td className={style.meter}>
+                <div className={style.tooltip2}>
                   4 stars represent {this.findPercentageOfStars(4)}% of rating
                 </div>
-                <span className="progress" style={styles4}></span>
+                <span className={style.progress} style={styles4}></span>
               </td>
-              <td className="underline rightOfBar">
+              <td className={`${style.underline} ${style.rightOfBar}`}>
                 {this.findPercentageOfStars(4)}%
               </td>
             </tr>
             <tr>
-              <td className="underline leftOfBar">3 star</td>
-              <td className="meter">
-                <div class="tooltip2">
+              <td className={`${style.underline} ${style.leftOfBar}`}>
+                3 star
+              </td>
+              <td className={style.meter}>
+                <div className={style.tooltip2}>
                   3 stars represent {this.findPercentageOfStars(3)}% of rating
                 </div>
-                <span className="progress" style={styles3}></span>
+                <span className={style.progress} style={styles3}></span>
               </td>
-              <td className="underline rightOfBar">
+              <td className={`${style.underline} ${style.rightOfBar}`}>
                 {this.findPercentageOfStars(3)}%
               </td>
             </tr>
             <tr>
-              <td className="underline leftOfBar">2 star</td>
-              <td className="meter">
-                <div class="tooltip2">
+              <td className={`${style.underline} ${style.leftOfBar}`}>
+                2 star
+              </td>
+              <td className={style.meter}>
+                <div className={style.tooltip2}>
                   2 stars represent {this.findPercentageOfStars(2)}% of rating
                 </div>
-                <span className="progress" style={styles2}></span>
+                <span className={style.progress} style={styles2}></span>
               </td>
-              <td className="underline rightOfBar">
+              <td className={`${style.underline} ${style.rightOfBar}`}>
                 {this.findPercentageOfStars(2)}%
               </td>
             </tr>
             <tr>
-              <td className="underline leftOfBar">1 star</td>
-              <td className="meter">
-                <div class="tooltip2">
+              <td className={`${style.underline} ${style.leftOfBar}`}>
+                1 star
+              </td>
+              <td className={style.meter}>
+                <div className={style.tooltip2}>
                   1 stars represent {this.findPercentageOfStars(1)}% of rating
                 </div>
-                <span className="progress" style={styles1}></span>
+                <span className={style.progress} style={styles1}></span>
               </td>
-              <td className="underline rightOfBar">
+              <td className={`${style.underline} ${style.rightOfBar}`}>
                 {this.findPercentageOfStars(1)}%
               </td>
             </tr>
           </table>
-          <div onClick={this.toggleClass} className="calculateStars">
-            <button className="downArrow"></button>
+          <div onClick={this.toggleClass} className={style.calculateStars}>
+            <button className={style.downArrow}></button>
             How do we calculate our star ratings?
           </div>
-          <p className={this.state.active ? "calculateExplain" : "null"}>
+          <p
+            className={`${
+              this.state.active ? style.calculateExplain : style.null
+            }`}
+          >
             We calculate a product’s star ratings based <br></br>
             on a machine learned model instead of a raw <br></br>
             data average. The model takes into account <br></br>
@@ -217,42 +232,54 @@ class Reviews extends React.Component {
             the ratings are from verified purchasers, and <br></br>
             factors that establish reviewer trustworthiness. <br></br>
           </p>
-          <span className="horizontalDivider"></span>{" "}
-          <div className="byFeature">By feature</div>
-          <div className="featureDiv">
-            <span className="feature">Feature</span>
-            <button className="amazonStars fourStars"></button>
-            <span className="afterStar">4.1</span>
+          <span className={style.horizontalDivider}></span>{" "}
+          <div className={style.byFeature}>By feature</div>
+          <div className={style.featureDiv}>
+            <span className={style.feature}>Feature</span>
+            <button
+              className={`${style.amazonStars} ${style.fourStars}`}
+            ></button>
+            <span className={style.afterStar}>4.1</span>
           </div>
-          <div className="featureDiv">
-            <span className="feature">Feature</span>
-            <button className="amazonStars threeStars feature2"></button>
-            <span className="afterStar">3.2</span>
+          <div className={style.featureDiv}>
+            <span className={style.feature}>Feature</span>
+            <button
+              className={`${style.amazonStars} ${style.threeStars} ${style.feature2}`}
+            ></button>
+            <span className={style.afterStar}>3.2</span>
           </div>
-          <div className="featureDiv">
-            <span className="feature">Feature</span>
-            <button className="amazonStars fourStars feature3"></button>
-            <span className="afterStar">3.9</span>
+          <div className={style.featureDiv}>
+            <span className={style.feature}>Feature</span>
+            <button
+              className={`${style.amazonStars} ${style.fourStars} ${style.feature3}`}
+            ></button>
+            <span className={style.afterStar}>3.9</span>
           </div>
-          <div className={this.state.active2 ? "featureDiv" : "null"}>
-            <span className="feature">Feature</span>
-            <button className="amazonStars fourStars feature3"></button>
-            <span className="afterStar">4.0</span>
+          <div
+            className={`${this.state.active2 ? style.featureDiv : style.null}`}
+          >
+            <span className={style.feature}>Feature</span>
+            <button
+              className={`${style.amazonStars} ${style.fourStars} ${style.feature3}`}
+            ></button>
+            <span className={style.afterStar}>4.0</span>
           </div>
           <div
             onClick={this.toggleClassSeeMore}
-            className="calculateStars seeMore"
+            className={`${style.calculateStars} ${style.seeMore}`}
           >
-            <button className="downArrow arrow2"></button>
+            <button className={`${style.downArrow} ${style.arrow2}`}></button>
             {this.state.see}
           </div>
-          <span className="horizontalDivider"></span>{" "}
-          <div className="reviewThisProduct">Review this product</div>
-          <div className="shareThoughts">
+          <span className={style.horizontalDivider}></span>{" "}
+          <div className={style.reviewThisProduct}>Review this product</div>
+          <div className={style.shareThoughts}>
             Share your thoughts with other customers
           </div>
-          <button className="btnWriteReview">Write a customer review</button>
-          <span className="horizontalDivider"></span>{" "}
+          <button className={style.btnWriteReview}>
+            Write a customer review
+          </button>
+          <span className={style.horizontalDivider}></span>{" "}
         </div>
         <div>
           {this.props.reviews.map((review) => (
