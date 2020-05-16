@@ -39,6 +39,7 @@
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
+    "build:prod": "webpack --config production.config.js",
     "test:coverage": "jest --verbose --coverage",
     "seed": "node server/scripts/seed.js ",
     "watch": "webpack --watch",
