@@ -16,8 +16,9 @@ app.listen(PORT, () => {
 app.get("/api/allreviews/", (req, res) => {
   if (req._parsedOriginalUrl.search) {
     var arr = req._parsedOriginalUrl.search.split("=");
+console.log(req._parsedOriginalUrl.search);
   }
-  // console.log('id server: ', arr[1]);
+   console.log('id server: ', arr[1]);
   if (arr) {
     db.getAllReviews(arr[1], (err, data) => {
       if (err) {
