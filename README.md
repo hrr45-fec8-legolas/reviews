@@ -2,6 +2,8 @@
 # Reviews
 This is the Reviews component for the Front End Capstone done at Hack Reactor. Our team replicated the Amazon product page, and this is a simplified version of the reviews module for a sample product.
 
+![reviews demo](reviewsdemo.png)
+
 ## Getting Started
 ```sh
 npm install -g webpack
