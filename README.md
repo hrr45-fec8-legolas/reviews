@@ -24,7 +24,7 @@ to run the tests with a coverage report: npm test:coverage
 ```sh
 npm run build
 npm run watch
-nodemon ./server.js  lcalhost 3004
+nodemon ./server.js localhost 3004
 ```
 
 Visit your localhost at port 3004!
@@ -33,7 +33,7 @@ Append /?id= with any number between 1 and 10,000,000 to your url to see product
 ## CRUD Operations
 | HTTP Verb |           Endpoint          |            Action            |
 |-----------| --------------------------- | ---------------------------- |
-| **POST**  |         /api/reviews        |  CREATE a new item into DB   |
+| **POST**  |       /api/reviews          |  CREATE a new item into DB   |
 | **GET**   |       /api/reviews          |  READ data and return        |
-| **PUT        /api/reviews            UPDATE item with new image  |
+| **PUT**   |       /api/reviews          |  UPDATE item with new image  |
 | **DELETE**|       /api/reviews          |  DELETE item based on ID     |
