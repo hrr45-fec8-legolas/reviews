@@ -6,8 +6,13 @@ This component renders the reviews for the products
 ```sh
 npm install -g webpack
 npm install
+``` 
 
-Please ensure that mariadb is running and execute mysql -u <USER> -p < schema.sql to add the database followed by npm run seed to seed your database
+## Seeding DB
+> Run this after ensuring you have Mariadb installed
+```sh
+mysql -u <USER> -p < schema.sql
+npm run seed
 ```
 
 ## Running the tests
@@ -19,9 +24,16 @@ to run the tests with a coverage report: npm test:coverage
 ```sh
 npm run build
 npm run watch
-nodemon ./server.js localhost 3004
+nodemon ./server.js  lcalhost 3004
 ```
 
 Visit your localhost at port 3004!
 Append /?id= with any number between 1 and 10,000,000 to your url to see product reviews.
 
+## CRUD Operations
+| HTTP Verb |           Endpoint          |            Action            |
+|-----------| --------------------------- | ---------------------------- |
+| **POST**  |         /api/reviews        |  CREATE a new item into DB   |
+| **GET**   |       /api/reviews          |  READ data and return        |
+| **PUT        /api/reviews            UPDATE item with new image  |
+| **DELETE**|       /api/reviews          |  DELETE item based on ID     |
