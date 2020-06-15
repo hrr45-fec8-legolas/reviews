@@ -1,6 +1,6 @@
 
-# Reviews Service
-This component renders the reviews for the products
+# Reviews
+This is the Reviews component for the Front End Capstone done at Hack Reactor. Our team replicated the Amazon product page, and this is a simplified version of the reviews module for a sample product.
 
 ## Getting Started
 ```sh
